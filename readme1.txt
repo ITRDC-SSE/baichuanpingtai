@@ -1,0 +1,3 @@
+fabric-node-sdk端peer配置文件config.json中用到的用户名和密码请换成自己的。
+
+by金融工兵团

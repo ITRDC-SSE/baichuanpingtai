@@ -1,0 +1,93 @@
+{
+	"test-network": {
+        "orderer": {
+			"url": "grpc://localhost:7050",
+			"server-hostname": "orderer1",
+			"tls_cacerts": "./cfg/crypto-config/ordererOrganizations/ordererOrg1/orderers/ordererOrg1orderer1/cacerts/ordererOrg1-cert.pem"
+		},
+		"org1": {
+			"name": "peerOrg1",
+			"mspid": "Org1MSP",
+			"ca": "http://localhost:7054",
+			"peer1": {
+				"requests": "grpc://localhost:7051",
+				"events": "grpc://localhost:7053",
+				"server-hostname": "peer1",
+				"tls_cacerts": "./cfg/crypto-config/peerOrganizations/peerOrg1/peers/peerOrg1Peer1/cacerts/peerOrg1-cert.pem"
+			},
+			"admin":"adminpw",
+    	    "strader":"wgmFvJDQexOR",
+    	    "btrader":"bpTvoMuZjEVa"
+		},
+        "org2": {
+			"name": "peerOrg2",
+			"mspid": "Org2MSP",
+			"ca": "http://localhost:8054",
+			"peer1": {
+				"requests": "grpc://localhost:8051",
+				"events": "grpc://localhost:8053",
+				"server-hostname": "peer2",
+				"tls_cacerts": "./cfg/crypto-config/peerOrganizations/peerOrg2/peers/peerOrg2Peer1/cacerts/peerOrg2-cert.pem"
+			},
+			"admin":"adminpw",
+    	    "strader":"bDSFacbCjqox",
+    	    "btrader":"JPCYslzZyFYI"
+		},
+        "org3": {
+			"name": "peerOrg3",
+			"mspid": "Org3MSP",
+			"ca": "http://localhost:9054",
+			"peer1": {
+				"requests": "grpc://localhost:9051",
+				"events": "grpc://localhost:9053",
+				"server-hostname": "peer3",
+				"tls_cacerts": "./cfg/crypto-config/peerOrganizations/peerOrg3/peers/peerOrg3Peer1/cacerts/peerOrg3-cert.pem"
+			},
+			"admin":"adminpw",
+    	    "strader":"VfMobmCnRhQM",
+    	    "btrader":"DQWUXZEkQRlE"
+		},
+        "org4": {
+			"name": "peerOrg4",
+			"mspid": "Org4MSP",
+			"ca": "http://localhost:10054",
+			"peer1": {
+				"requests": "grpc://localhost:10051",
+				"events": "grpc://localhost:10053",
+				"server-hostname": "peer4",
+				"tls_cacerts": "./cfg/crypto-config/peerOrganizations/peerOrg4/peers/peerOrg4Peer1/cacerts/peerOrg4-cert.pem"
+			},
+    	   "admin":"adminpw",
+    	   "strader":"CLYgVSsEGdzU",
+    	   "btrader":"ioArfaPApBDv"
+		},
+        "org5": {
+			"name": "peerOrg5",
+			"mspid": "Org5MSP",
+			"ca": "http://localhost:11054",
+			"peer1": {
+				"requests": "grpc://localhost:11051",
+				"events": "grpc://localhost:11053",
+				"server-hostname": "peer5",
+				"tls_cacerts": "./cfg/crypto-config/peerOrganizations/peerOrg5/peers/peerOrg5Peer1/cacerts/peerOrg5-cert.pem"
+			},
+			"admin":"adminpw",
+    	    "strader":"jrDNjPebIEBD",
+    	    "btrader":"MHmZKBuOMAYs"
+		}									
+	},
+	
+	"app-config" : {
+        "channelID" : "mychannel",
+        "chainName" : "StockChain",
+        "chaincodeID" : "sjs724a",
+        "chaincodeVersion" : "v0",
+        "chaincodePath" : "sjsproject724",
+        "gopath" : "/home/sss/dev/go",
+        "kvspath" :  "/home/sss/tmp/hfc-proj-kvs",
+        "org" : "org1",
+        "username" : "admin", 
+        "password" : "adminpw",
+        "genesis" : "./cfg/channel.tx"
+    }
+}

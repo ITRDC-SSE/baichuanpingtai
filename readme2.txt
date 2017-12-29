@@ -1,0 +1,3 @@
+docker-compose-couchdb-ca.yaml文件为fabric启动配置文件，详细配置了peer节点、order信息、ca服务及couchdb配置信息
+
+by金融工兵团
